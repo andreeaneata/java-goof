@@ -1,0 +1,59 @@
+custom_rules:
+  - id: ghhjkh
+    description: yuiokl;
+    severity: low
+    cwe: []
+    fix_analysis: ''
+    rule_code: >-
+      "password"
+
+      # This example searches for string constants and identifiers (function or
+      variable names) in the code. This can be
+
+      # used to find sensitive hardcoded data such as passwords. You can also
+      use the following templates to search for
+
+      # strings or identifiers individually, and integers and booleans can be
+      looked up as well:
+
+      #     StringLiteral<"password">   - only finds string literals with the
+      given value
+
+      #     Identifier<"password">      - only finds identifiers (functions and
+      variable names) with the given value
+
+      #     NumberLiteral<1234>         - finds numbers (e.g. a port number)
+
+      #     BooleanLiteral<"true">      - finds boolean constants of value
+      "true" (note that capitalization matters -
+
+      #                                   Python takes an upper-case "True")
+
+      # Regular expressions (in Google re2 syntax) can be used in place of
+      strings as well. For example, the following
+
+      # query will match all string constants containing a "password" substring:
+
+      #     StringLiteral<~".*password.*">
+
+      # A wildcard predicate can be used to find any string, not just strings
+      matching a specified text:
+
+      #     StringLiteral<PRED:Any>
+    languages:
+      - apex
+      - c
+      - cpp
+      - csharp
+      - go
+      - html
+      - java
+      - javascript
+      - kotlin
+      - php
+      - python
+      - ruby
+      - scala
+      - swift
+      - typescript
+      - vb
