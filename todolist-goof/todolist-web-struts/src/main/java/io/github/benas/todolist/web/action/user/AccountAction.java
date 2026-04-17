@@ -368,5 +368,8 @@ public class AccountAction extends BaseAction {
     public void setUser(User user) {
         this.user = user;
     }
-
+    
+    private boolean newPasswordDoesNotMatchConfirmationPassword() {
+        return !changePasswordForm.getNewPassword().equals(changePasswordForm.getConfirmationPassword());
+    }
 }
